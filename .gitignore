@@ -4,6 +4,10 @@
 *.mp3
 /.metadate/
 /.recommenders/
-.settings/
+/.settings/
 *.class
 /.metadata/
+
+
+*.classpath
+*.project
