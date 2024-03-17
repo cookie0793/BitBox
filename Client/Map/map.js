@@ -5,6 +5,7 @@ foodLat = 음식점 위도
 foodLon = 음식점 경도
 set_center() : 위치의 기본값(서버 위치)
 panTo() : 음식점 좌표로 매끄럽게 이동시켜주는 역할
+setCenter() : 버튼 클릭 시 사용자의 현재 위치로 이동시켜주는 역할
 set_user_location() : 사용자 위도, 경도 설정 메서드
 set_food_location() : 음식점 위도, 경도 설정 메서드 + 해당 음식점에 마커 (사용자가 지도 안에서 음식점을 선택했을 경우 해당 경도와 위도로 바뀌게 해야됨)
 getUserAroundRestaurants() : 사용자의 위도와 경도를 뽑아서 rest.js에 넘겨주고 해당하는 좌표의 반경에 음식점을 찾아준다.
@@ -71,6 +72,11 @@ if (navigator.geolocation) {
     map.setLevel(5);
     map.setCenter(locPosition);
 }
+function setCenter(lat, lon) {
+    var moveLatLon = new kakao.maps.LatLng(lat, lon);
+
+    map.setCenter(moveLatLon);
+}
 
 // 현재 위치로 이동하는 함수
 function now_location() {
@@ -93,15 +99,11 @@ function set_user_location(lat, lon) {
     this.lon = lon;
 }
 
-var imageSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAflBMVEVHcEw7PkAqLTAqLTAqLTArLjEuMTQrLjEqLTAqLTArLjEqLTArLjEmKSwoKy4tLzJsbnDBwcKIiYo3OjwtLzJ8fX7Gx8dCREYuMTRJTE6DhIY/QURSVFbGyMkuMTQwMzZAQ0ZCRUd7fX9fYWM3OTygoqN0dXdaXF5GSEtmaGpBFLduAAAAKnRSTlMAIGmDiioRu//YS/XK//82r0l67axhF+L1w0NYYQZ4/2jUL3P3M3ySp0HdbrZJAAAAx0lEQVR4AXXPRRYDQQwDUQ0rpDAzJ/c/YBj8Gv62GmwYSZrlaYGQsuJLrQ5P0eBXDkdCI3Nikw+tB/GhDatOUux0u71+i2QFa/CMQzyMxiJZwpiQnOJlxoc5DJJa4GXZF7ly4/wb6cS1yAFeCpLawNjqt0DtGXcw9uJDViT1V+vDGh3EP+0B9+qXtnCMf1XrIxzH9be2TvCcPlFTBGzlPGrN3vGMoLGeF5cIGip+EcuDuB4h4iJNEXOl9ojqrxNEXSaIm/Vg3QHkiw5tgZzN6QAAAABJRU5ErkJggg==', // 마커이미지의 주소입니다    
-    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
-    imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
 // 지도에 마커와 인포윈도우를 표시하는 함수입니다
 function displayMarker(locPosition, message) {
     // 사용자의 현재 위치를 나타내는 마커 이미지 설정
     const userMarkerImage = new kakao.maps.MarkerImage(
-        '/Map/free-icon-placeholder-4151073.png', // 여기에 이미지 URL을 입력하세요
+        '../images/user_location.png', 
         new kakao.maps.Size(50, 50), // 마커 이미지 크기
         { offset: new kakao.maps.Point(25, 50) } // 마커 이미지의 중심좌표 설정
     );

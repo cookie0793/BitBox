@@ -15,7 +15,7 @@ function findRestaurants(lat, lon) {
         fetch(url, {
             method: 'GET',
             headers: {
-                'Authorization': 'KakaoAK REST API 주소'
+                'Authorization': 'KakaoAK 038d89c40cab6d2dd812a4067c3432ec'
             }
         })
             .then(response => response.json())
@@ -35,16 +35,19 @@ function findRestaurants(lat, lon) {
 
                         // 인포윈도우에 표시할 내용 구성
                         const infoContent = `
-                            <div style="padding:10px;">
-                                <div style="font-weight:bold; font-size:14px;">${place.place_name}</div>
+                            <div style="padding:5px; display : inline-block; height : 60px;">
+                                <div style="font-weight:bold; font-size:15px;">${place.place_name}</div>
                                 <div style="margin-top:3px; font-size:10px">종류: ${place.category_name}</div>
                                 <div style="font-size:10px">전화번호: ${place.phone}</div>
-                            </div>
-                        `;
+                                <button style = "font-size : 10px; display : inline;">길찾기</button>
+                            </div>`,
+                            iwRemoveable = true;
+
 
                         // 인포윈도우 생성
                         const infowindow = new kakao.maps.InfoWindow({
                             content: infoContent,
+                            removable: iwRemoveable
                         });
 
                         // 마커 클릭 시 인포윈도우 열기
