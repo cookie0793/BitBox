@@ -3,15 +3,21 @@ package db;
 import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBConnection {
 	public static Connection getConnection() {
 	    Connection conn = null;
+	    
+	    final String url = "jdbc:mysql://127.0.0.1:3306/test";
+	    final String user = "root";
+	    final String password = "1234";
+	    
 	    try {
-	        conn = DriverManager.getConnection("jdbc:mysql://192.168.0.5:3306/BitBox", "bitbox", "20240315!!");
-	        System.out.println("db연결");
+	        conn = DriverManager.getConnection(url, user, password);
+	        System.out.println("DB 연결 성공");
 	    } catch (SQLException e) {
 	        System.out.println("DB 연결 오류");
 	        e.printStackTrace();
@@ -20,17 +26,17 @@ public class DBConnection {
 	}
 	
 	public class DBClose {
-	    public static void close(Connection conn, Statement stmt, ResultSet rs) {
+	    public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
 	        try {
 	            if(conn != null) {
 	                conn.close();
 	            }
-//	            if(stmt != null) {
-//	                stmt.close();
-//	            }
-//	            if(rs != null) {
-//	                rs.close();
-//	            }
+	            if(pstmt != null) {
+	                pstmt.close();
+	            }
+	            if(rs != null) {
+	                rs.close();
+	            }
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        }
