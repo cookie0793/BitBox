@@ -92,6 +92,13 @@
 /* main_content_box */
 .main_content_box p {font-size: 17px; font-weight: 400; color: #444; margin-bottom: 24px;}
 .main_content_box .box_img {background: #eee; height: 200px;}
+.main_content_box .box_img2 {background: #eee; height: 340px;}
+/* .main_content_box .box_img { background-image: url("../images/main_content_chat.png"); background-size: cover;} */
+.main_content_box .box_img .board {background-image: url("../images/main_board.png"); background-size: cover;}
+.main_content_box .box_img .chat {background-image: url("../images/main_chat.png"); background-size: cover;}
+.main_content_box .box_img .todo {background-image: url("../images/main_todo.png"); background-size: cover;}
+.main_content_box .box_img .map1 {background-image: url("../images/main_map1.png"); background-size: cover;}
+.main_content_box .box_img2 .map2 {background-image: url("../images/main_map2.png"); background-size: cover;}
 
 /* footer */
 .footer {position: fixed; bottom:0;left: 0;width: 100%; z-index: 1001; background:#414143; height: 40px; line-height: 40px;}
