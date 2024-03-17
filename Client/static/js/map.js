@@ -103,7 +103,7 @@ function set_user_location(lat, lon) {
 function displayMarker(locPosition, message) {
     // 사용자의 현재 위치를 나타내는 마커 이미지 설정
     const userMarkerImage = new kakao.maps.MarkerImage(
-        '../images/user_location.png', 
+        '../static/images/user_location.png', 
         new kakao.maps.Size(50, 50), // 마커 이미지 크기
         { offset: new kakao.maps.Point(25, 50) } // 마커 이미지의 중심좌표 설정
     );
