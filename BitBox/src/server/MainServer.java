@@ -12,7 +12,7 @@ import db.dao.LoginDao;
 public class MainServer extends WebSocketServer {
 	public static void main(String[] args) {
 //		String host = "192.168.0.20";
-		String host = "192.168.0.5";
+		String host = "127.0.0.1";
 		final int PORT = 9000;
 		
 		WebSocketServer server = new MainServer(new InetSocketAddress(host, PORT));
