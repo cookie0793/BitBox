@@ -55,26 +55,26 @@
 .side_nav .login_box .login_btn {background: #0a9102; border-radius: 4px; color: #fff; font-size: 15px; font-weight: 500; text-align: center; display: block; height: 36px;line-height: 36px; width: 100%;}
 .side_nav .login_box p {font-size: 13px; font-weight: 400; color: #333; margin-top: 10px;}
 
-.gnb_nav ul li {padding: 0 20px 0 38px; height: 40px; line-height: 38px;}
-.gnb_nav ul li:nth-child(1) {background:url(../images/ico_home.svg)no-repeat 15px 14px;}
-.gnb_nav ul li:nth-child(2) {background:url(../images/ico_board.svg)no-repeat 15px 14px;}
-.gnb_nav ul li:nth-child(3) {background:url(../images/ico_map.svg)no-repeat 15px 14px;}
-.gnb_nav ul li:nth-child(4) {background:url(../images/ico_chat.svg)no-repeat 15px 14px;}
-.gnb_nav ul li:nth-child(5) {background:url(../images/ico_todo.svg)no-repeat 15px 14px;}
-.gnb_nav ul li a {font-size: 14px; font-weight: 500; color: #333;}
+.gnb_nav ul li {height: 40px; line-height: 43px;}
+.gnb_nav ul li:nth-child(1) {background:url(../images/ico_home.svg)no-repeat 15px center;}
+.gnb_nav ul li:nth-child(2) {background:url(../images/ico_board.svg)no-repeat 15px center;}
+.gnb_nav ul li:nth-child(3) {background:url(../images/ico_map.svg)no-repeat 15px center;}
+.gnb_nav ul li:nth-child(4) {background:url(../images/ico_chat.svg)no-repeat 15px center;}
+.gnb_nav ul li:nth-child(5) {background:url(../images/ico_todo.svg)no-repeat 15px center;}
+.gnb_nav ul li a {font-size: 14px; font-weight: 500; color: #333; display: block; width: 100%; height: 40px; padding: 0 40px;}
 
-.gnb_nav ul li:nth-child(1):hover {background:url(../images/ico_home_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(2):hover {background:url(../images/ico_board_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(3):hover {background:url(../images/ico_map_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(4):hover {background:url(../images/ico_chat_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(5):hover {background:url(../images/ico_todo_select.svg)no-repeat 15px 14px #414143;}
+.gnb_nav ul li:nth-child(1):hover {background:url(../images/ico_home_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(2):hover {background:url(../images/ico_board_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(3):hover {background:url(../images/ico_map_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(4):hover {background:url(../images/ico_chat_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(5):hover {background:url(../images/ico_todo_select.svg)no-repeat 15px center #414143;}
 .gnb_nav ul li:hover a{color: #fff;}
 
-.gnb_nav ul li:nth-child(1).select {background:url(../images/ico_home_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(2).select {background:url(../images/ico_board_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(3).select {background:url(../images/ico_map_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(4).select {background:url(../images/ico_chat_select.svg)no-repeat 15px 14px #414143;}
-.gnb_nav ul li:nth-child(5).select {background:url(../images/ico_todo_select.svg)no-repeat 15px 14px #414143;}
+.gnb_nav ul li:nth-child(1).select {background:url(../images/ico_home_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(2).select {background:url(../images/ico_board_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(3).select {background:url(../images/ico_map_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(4).select {background:url(../images/ico_chat_select.svg)no-repeat 15px center #414143;}
+.gnb_nav ul li:nth-child(5).select {background:url(../images/ico_todo_select.svg)no-repeat 15px center #414143;}
 .gnb_nav ul li.select a{color: #fff;}
 
 /* main */
