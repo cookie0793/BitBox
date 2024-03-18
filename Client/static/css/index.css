@@ -91,8 +91,8 @@
 
 /* main_content_box */
 .main_content_box p {font-size: 17px; font-weight: 400; color: #444; margin-bottom: 24px;}
-.main_content_box .box_img {background: #eee; height: 200px;}
-.main_content_box .box_img2 {background: #eee; height: 340px;}
+.main_content_box .box_img {background: #eee; height: 190px;}
+.main_content_box .box_img2 {background: #eee; /*height: 340px;*/}
 /* .main_content_box .box_img { background-image: url("../images/main_content_chat.png"); background-size: cover;} */
 .main_content_box .box_img .board {background-image: url("../images/main_board.png"); background-size: cover;}
 .main_content_box .box_img .chat {background-image: url("../images/main_chat.png"); background-size: cover;}
